@@ -10,17 +10,19 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body class="min-h-screen w-full bg-[#DCDCDC]">
+<body class="h-screen w-full bg-[#DCDCDC] flex flex-col">
 
     <header
         class="flex justify-center items-center w-full h-30 gap-16 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.2)] bg-[#D3D3D3]">
         <img src="logo-marca-puc-h-2.svg" alt="Logo" width="170" height="170" class="flex justify-center items-center">
-        <div class="flex justify-center items-center">
-            <h1 class="text-[#1C1C1C] font-bold text-lg">PLANO DE VIDA UNIVERSITÁRIO</h1>
+        <div class="flex-col justify-center items-center text-center mt-2">
+            <h1 class="text-pink-900 font-bold text-2xl"><strong>PLANO DE VIDA UNIVERSITÁRIO</strong></h1>
+            <div class="bg-[#A9A9A9] w-full h-px"></div>
+            <div class="text-[12px] text-[#696969] font-italic">ATP de <strong>Filosofia</strong></div>
         </div>
     </header>
 
-    <main class="grid grid-cols-1 w-full min-h-screen my-24 place-items-center gap-16">
+    <main class="w-full flex-1 flex justify-center items-center flex-col">
 
         <div
             class="flex justify-start items-center w-450 lg:w-350 bg-[#D3D3D3] h-50 lg:h-55 rounded-md shadow-[0_0_10px_rgba(0,0,0,0.3)]">
@@ -32,13 +34,11 @@
                 </div>
 
                 <div class="w-full h-1/5 flex justify-between items-center px-8 -mt-6">
-                    <div class="bg-white w-20 h-8 rounded-md flex justify-center items-center gap-2 ">
-                        <i class="fa-solid fa-tag text-[#1C1C1C]"></i>
-                        <i class="text-sm font-semibold text-[#1C1C1C]">EAD</i>
+                    <div class="bg-white w-20 h-8 rounded-md flex justify-center items-center gap-2 group hover:bg-[#1C1C1C] transition duration-300 hover:transition duration-300">
+                        <i class="fa-solid fa-tag text-[#1C1C1C] group-hover:text-white transition duration-300 group-hover:transition duration-300"></i>
+                        <i class="text-sm font-semibold text-[#1C1C1C] group-hover:text-white transition duration-300 group-hover:transition duration-300 cursor-default">EAD</i>
                     </div>
-                    <div class="">
-                        <i class="fa-regular fa-star text-2xl text-white"></i>
-                    </div>
+                        <i class="fa-regular fa-star text-2xl text-white cursor-pointer" id="star-1" onclick="star(1)"></i> 
                 </div>
             </div>
 
@@ -66,7 +66,47 @@
 
         </div>
 
-        <div
+        <div class="bg-pink-900 w-300 h-20 mt-25 rounded-sm justify-center items-center inline-flex gap-4 shadow-[0_0_10px_rgba(0,0,0,0.3)]">
+
+            <div class="flex flex-col w-1/7 h-full items-center justify-between text-center ml-[16px] hover:bg-pink-800 transition duration-300 hover:transition duration-300 cursor-pointer">
+                <span class="text-white text-sm font-semibold mt-7.5">SOBRE MIM</span>
+                <div class="w-full bg-[#D3D3D3] h-2"></div>
+            </div>
+
+            <div class="flex flex-col w-1/7 h-full  items-center justify-center text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300">
+                <span class="text-white text-sm font-semibold">MINHAS HABILIDADES</span>
+                <div class="w-full bg-amber-500 h-px hidden"></div>
+            </div>
+
+            <div class="flex flex-col w-1/7 h-full  items-center justify-center text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300">
+                <span class="text-white text-sm font-semibold">DAQUI 8 ANOS (PESSOALMENTE)</span>
+                <div class="w-full bg-amber-500 h-px hidden"></div>
+            </div>
+
+            <div class="flex flex-col w-1/7 h-full  items-center justify-center text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300">
+                <span class="text-white text-sm font-semibold">DAQUI 8 ANOS (PROFISSIONALMENTE)</span>
+                <div class="w-full bg-amber-500 h-px hidden"></div>
+            </div>
+
+            <div class="flex flex-col w-1/7 h-full  items-center justify-center text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300">
+                <span class="text-white text-sm font-semibold">DIFICULDADES NO PROCESSO</span>
+                <div class="w-full bg-amber-500 h-px hidden"></div>
+            </div>
+
+            <div class="flex flex-col w-1/7 h-full  items-center justify-center text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300">
+                <span class="text-white text-sm font-semibold">PROFISSIONAL INSPIRADOR</span>
+                <div class="w-full bg-amber-500 h-px hidden"></div>
+            </div>
+
+            <div class="flex flex-col w-1/7 h-full  items-center justify-center text-center mr-[16px] cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300">
+                <span class="text-white text-sm font-semibold">REFLEXÕES FINAIS</span>
+                <div class="w-full bg-amber-500 h-px hidden"></div>
+            </div>
+
+        </div>
+
+
+        <!--<div
             class="lg:w-350 flex justify-start items-center w-450 lg:w-350 bg-[#D3D3D3] h-50 lg:h-55 rounded-md shadow-[0_0_10px_rgba(0,0,0,0.3)]">
 
             <div
@@ -200,11 +240,22 @@
                 </i>
             </div>
 
-        </div>
+        </div>-->
 
 
     </main>
 
+    <script>
+        function star(int) {
+            if (document.getElementById("star-" + int).classList.contains("fa-regular")) {
+                document.getElementById("star-" + int).classList.remove("fa-regular");
+                document.getElementById("star-" + int).classList.add("fa-solid");
+            } else {
+                document.getElementById("star-" + int).classList.add("fa-regular");
+                document.getElementById("star-" + int).classList.remove("fa-solid");
+            }
+        }
+    </script>
 </body>
 
 </html>
