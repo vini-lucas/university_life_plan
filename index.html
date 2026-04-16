@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body class="h-screen w-full bg-[#DCDCDC] flex flex-col">
+<body class="h-screen w-full flex flex-col" style="background-image: url(puc.png);">
 
     <!-- Cabeçário -->
     <header
@@ -24,91 +24,137 @@
     </header>
 
     <!-- Conteúdo -->
-    <main class="w-full flex-1 flex justify-center items-center flex-col">
+    <main class="w-full flex-1 flex justify-center items-center flex-col gap-8">
 
         <!-- Card -->
         <div
-            class="flex justify-start items-center w-450 lg:w-350 bg-[#D3D3D3] h-50 lg:h-55 rounded-md shadow-[0_0_10px_rgba(0,0,0,0.3)] ">
+            class="flex justify-start items-center w-450 lg:w-350 h-50 lg:h-55 rounded-md shadow-2xl bg-[#D3D3D3]">
 
             <!-- Parte esquerda do card -->
             <div
                 class="w-120 lg:w-80 h-full flex-col justify-center items-center bg-linear-to-l from-[#BA55D3] to-[#9400D3] rounded-l-md">
-                
+
                 <div class="flex items-center justify-center h-4/5 mt-3">
                     <h2 class="font-semibold text-white">SOBRE MIM</h2>
                 </div>
 
                 <div class="w-full h-1/5 flex justify-between items-center px-8 -mt-6">
-                    <div class="bg-white w-20 h-8 rounded-md flex justify-center items-center gap-2 group hover:bg-[#1C1C1C] transition duration-300 hover:transition duration-300">
-                        <i class="fa-solid fa-tag text-[#1C1C1C] group-hover:text-white transition duration-300 group-hover:transition duration-300"></i>
-                        <i class="text-sm font-semibold text-[#1C1C1C] group-hover:text-white transition duration-300 group-hover:transition duration-300 cursor-default">EAD</i>
+                    <div
+                        class="bg-white w-20 h-8 rounded-md flex justify-center items-center gap-2 group hover:bg-[#1C1C1C] transition duration-300 hover:transition duration-300">
+                        <i
+                            class="fa-solid fa-tag text-[#1C1C1C] group-hover:text-white transition duration-300 group-hover:transition duration-300"></i>
+                        <i
+                            class="text-sm font-semibold text-[#1C1C1C] group-hover:text-white transition duration-300 group-hover:transition duration-300 cursor-default">EAD</i>
                     </div>
-                        <i class="fa-regular fa-star text-2xl text-white cursor-pointer" id="star-1" onclick="star(1)"></i> 
+                    <i class="fa-regular fa-star text-2xl text-white cursor-pointer" id="star-1" onclick="star(1)"></i>
                 </div>
             </div>
 
             <!-- Parte direita do card -->
             <div class="flex-1 w-full h-full flex items-center justify-center p-2">
                 <i class="text-center text-[#1C1C1C] text-[14px]">
-                    Desde cedo sou apaixonado por <strong>FUTEBOL</strong>, pratico-o (principalmente futsal, tanto jogando com os amigos
+                    Desde cedo sou apaixonado por <strong>FUTEBOL</strong>, pratico-o (principalmente futsal, tanto
+                    jogando com os amigos
                     na semana quanto participando de campeonatos) e o acompanho regularmente.<br>
                     Trabalho no setor administrativo de uma financeira localizada em minha cidade. Esta empresa me
                     influenciou muito para mim seguir neste ramo de carreira devido as habilidades que precisei
-                    desenvolver para realizar as demandas que ela necessitava, e por um curso de <strong>PHP</strong> que o T.I contratou
-                    para mim e alguns colegas; após finalizá-lo percebi que a área de <strong>PROGRAMAÇÃO</strong> é a qual eu gostaria
+                    desenvolver para realizar as demandas que ela necessitava, e por um curso de <strong>PHP</strong>
+                    que o T.I contratou
+                    para mim e alguns colegas; após finalizá-lo percebi que a área de <strong>PROGRAMAÇÃO</strong> é a
+                    qual eu gostaria
                     de seguir carreira.<br>
+                </i>
+            </div>
+
+        </div>
+
+        <!-- Card -->
+        <div
+            class="flex justify-start items-center w-450 lg:w-350 h-50 lg:h-55 rounded-md shadow-2xl bg-[#D3D3D3] mb-20">
+
+            <!-- Parte esquerda do card -->
+            <div
+                class="w-120 lg:w-80 h-full flex-col justify-center items-center bg-linear-to-l from-[#BA55D3] to-[#9400D3] rounded-l-md">
+
+                <div class="flex items-center justify-center h-4/5 mt-3">
+                    <h2 class="font-semibold text-white">AUTOCONHECIMENTO</h2>
+                </div>
+
+                <div class="w-full h-1/5 flex justify-between items-center px-8 -mt-6">
+                    <div
+                        class="bg-white w-20 h-8 rounded-md flex justify-center items-center gap-2 group hover:bg-[#1C1C1C] transition duration-300 hover:transition duration-300">
+                        <i
+                            class="fa-solid fa-tag text-[#1C1C1C] group-hover:text-white transition duration-300 group-hover:transition duration-300"></i>
+                        <i
+                            class="text-sm font-semibold text-[#1C1C1C] group-hover:text-white transition duration-300 group-hover:transition duration-300 cursor-default">EAD</i>
+                    </div>
+                    <i class="fa-regular fa-star text-2xl text-white cursor-pointer" id="star-1" onclick="star(1)"></i>
+                </div>
+            </div>
+
+            <!-- Parte direita do card -->
+            <div class="flex-1 w-full h-full flex items-center justify-center p-2">
+                <i class="text-center text-[#1C1C1C] text-[14px]">
                     Durante minha adolescência e até no começo da fase adulta eu tive muita indecisão de qual graduação
                     escolher para o meu futuro, tinha interesse em muitas coisas mas me faltava uma decisão concreta na
                     qual seguir, agora percebo o quão importante é o <strong>AUTOCONHECIMENTO</strong> para a vida
                     acadêmica-profissional, precisamos de vivência, isto é, tempo de caminhada e estudos para sabermos
                     de fato o que queremos para a nossa vida profissional; necessitamos de pessoas que nos auxiliem no
                     que seguir, para motivar, e, principalmente, indagar o que nos motiva e faz feliz, nos dá ânimo para
-                    trabalhar e que nos vemos fazendo no futuro, foi desta forma que escolhi o meu <strong>CURSO</strong>.
+                    trabalhar e que nos vemos fazendo no futuro, foi desta forma que escolhi o meu
+                    <strong>CURSO</strong>.
                 </i>
             </div>
 
         </div>
-      
-        <!-- Rodapé de navegação -->
-        <div class="bg-pink-900 w-300 h-20 mt-25 rounded-t-sm justify-center items-center inline-flex gap-4 shadow-[0_0_10px_rgba(0,0,0,0.3)]">
 
-            <div class="flex flex-col w-1/7 h-full items-center justify-between text-center ml-[16px] hover:bg-pink-800 transition duration-300 hover:transition duration-300 cursor-pointer">
+        <!-- Rodapé de navegação -->
+        <div
+            class="bg-pink-900 w-300 h-20 mt-25 rounded-t-sm justify-center items-center inline-flex gap-4 shadow-[0_0_10px_rgba(0,0,0,0.3)] absolute bottom-0">
+
+            <div
+                class="flex flex-col w-1/7 h-full items-center justify-between text-center ml-[16px] hover:bg-pink-800 transition duration-300 hover:transition duration-300 cursor-pointer">
                 <span class="text-white text-sm font-semibold mt-7.5">SOBRE MIM</span>
                 <div class="w-full bg-[#D3D3D3] h-2"></div>
             </div>
 
-            <div class="flex flex-col w-1/7 h-full  items-center justify-center text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300">
+            <div
+                class="flex flex-col w-1/7 h-full  items-center justify-center text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300">
                 <span class="text-white text-sm font-semibold">MINHAS HABILIDADES</span>
                 <div class="w-full bg-amber-500 h-px hidden"></div>
             </div>
 
-            <div class="flex flex-col w-1/7 h-full  items-center justify-center text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300">
+            <div
+                class="flex flex-col w-1/7 h-full  items-center justify-center text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300">
                 <span class="text-white text-sm font-semibold">DAQUI 8 ANOS (PESSOALMENTE)</span>
                 <div class="w-full bg-amber-500 h-px hidden"></div>
             </div>
 
-            <div class="flex flex-col w-1/7 h-full  items-center justify-center text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300">
+            <div
+                class="flex flex-col w-1/7 h-full  items-center justify-center text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300">
                 <span class="text-white text-sm font-semibold">DAQUI 8 ANOS (PROFISSIONALMENTE)</span>
                 <div class="w-full bg-amber-500 h-px hidden"></div>
             </div>
 
-            <div class="flex flex-col w-1/7 h-full  items-center justify-center text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300">
+            <div
+                class="flex flex-col w-1/7 h-full  items-center justify-center text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300">
                 <span class="text-white text-sm font-semibold">DIFICULDADES NO PROCESSO</span>
                 <div class="w-full bg-amber-500 h-px hidden"></div>
             </div>
 
-            <div class="flex flex-col w-1/7 h-full  items-center justify-center text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300">
+            <div
+                class="flex flex-col w-1/7 h-full  items-center justify-center text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300">
                 <span class="text-white text-sm font-semibold">PROFISSIONAL INSPIRADOR</span>
                 <div class="w-full bg-amber-500 h-px hidden"></div>
             </div>
 
-            <div class="flex flex-col w-1/7 h-full  items-center justify-center text-center mr-[16px] cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300">
+            <div
+                class="flex flex-col w-1/7 h-full  items-center justify-center text-center mr-[16px] cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300">
                 <span class="text-white text-sm font-semibold">REFLEXÕES FINAIS</span>
                 <div class="w-full bg-amber-500 h-px hidden"></div>
             </div>
 
         </div>
-
 
         <!--<div
             class="lg:w-350 flex justify-start items-center w-450 lg:w-350 bg-[#D3D3D3] h-50 lg:h-55 rounded-md shadow-[0_0_10px_rgba(0,0,0,0.3)]">
