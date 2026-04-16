@@ -27,8 +27,8 @@
     <main class="w-full flex-1 flex justify-center items-center flex-col gap-8">
 
         <!-- Card -->
-        <div
-            class="flex justify-start items-center w-450 lg:w-350 h-50 lg:h-55 rounded-md shadow-2xl bg-[#D3D3D3]" id="card-sobre">
+        <div class="flex justify-start items-center w-450 lg:w-350 h-50 lg:h-55 rounded-md shadow-2xl bg-[#D3D3D3] hidden"
+            id="card-sobre">
 
             <!-- Parte esquerda do card -->
             <div
@@ -69,8 +69,8 @@
         </div>
 
         <!-- Card -->
-        <div
-            class="flex justify-start items-center w-450 lg:w-350 h-50 lg:h-55 rounded-md shadow-2xl bg-[#D3D3D3] mb-20" id="card-autoconhecimento">
+        <div class="flex justify-start items-center w-450 lg:w-350 h-50 lg:h-55 rounded-md shadow-2xl bg-[#D3D3D3] mb-20 hidden"
+            id="card-autoconhecimento">
 
             <!-- Parte esquerda do card -->
             <div
@@ -108,190 +108,214 @@
 
         </div>
 
-        <!-- Rodapé de navegação -->
-        <div
-            class="bg-pink-900 w-300 h-20 mt-25 rounded-t-sm justify-center items-center inline-flex gap-4 shadow-[0_0_10px_rgba(0,0,0,0.3)] absolute bottom-0">
+        <!-- Card -->
+        <div class="flex justify-start items-center w-450 lg:w-350 h-50 lg:h-55 rounded-md shadow-2xl bg-[#D3D3D3] mb-20 hidden"
+            id="card-habilidades">
 
+            <!-- Parte esquerda do card -->
             <div
-                class="flex flex-col w-1/7 h-full items-center justify-between text-center ml-[16px] hover:bg-pink-800 transition duration-300 hover:transition duration-300 cursor-pointer" onclick="sobre()">
-                <span class="text-white text-sm font-semibold mt-7.5">SOBRE MIM</span>
-                <div class="w-full bg-[#D3D3D3] h-2" id="marcador_sobre"></div>
-            </div>
+                class="w-120 lg:w-80 h-full flex-col justify-center items-center bg-linear-to-l from-[#BA55D3] to-[#9400D3] rounded-l-md">
 
-            <div
-                class="flex flex-col w-1/7 h-full  items-center justify-between text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300" onclick="habilidades()">
-                <span class="text-white text-sm font-semibold mt-7.5">MINHAS HABILIDADES</span>
-                <div class="w-full bg-[#D3D3D3] h-2 hidden" id="marcador_habilidades"></div>
-            </div>
-
-            <div
-                class="flex flex-col w-1/7 h-full  items-center justify-between text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300" onclick="oito_anos_pessoalmente()">
-                <span class="text-white text-sm font-semibold mt-5">DAQUI 8 ANOS (PESSOALMENTE)</span>
-                <div class="w-full bg-[#D3D3D3] h-2 hidden" id="marcador_oito_anos_pess"></div>
-            </div>
-
-            <div
-                class="flex flex-col w-1/7 h-full  items-center justify-between text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300" onclick="oito_anos_profissionalmente()">
-                <span class="text-white text-sm font-semibold mt-5">DAQUI 8 ANOS (PROFISSIONALMENTE)</span>
-                <div class="w-full bg-[#D3D3D3] h-2 hidden" id="marcador_oito_anos_prof"></div>
-            </div>
-
-            <div
-                class="flex flex-col w-1/7 h-full  items-center justify-between text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300" onclick="dificuldades()">
-                <span class="text-white text-sm font-semibold mt-5">DIFICULDADES NO PROCESSO</span>
-                <div class="w-full bg-[#D3D3D3] h-2 hidden" id="marcador_dificuldades"></div>
-            </div>
-
-            <div
-                class="flex flex-col w-1/7 h-full  items-center justify-between text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300" onclick="inspirador()">
-                <span class="text-white text-sm font-semibold mt-5">PROFISSIONAL INSPIRADOR</span>
-                <div class="w-full bg-[#D3D3D3] h-2 hidden" id="marcador_inspirador"></div>
-            </div>
-
-            <div
-                class="flex flex-col w-1/7 h-full  items-center justify-between text-center mr-[16px] cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300" onclick="reflexoes()">
-                <span class="text-white text-sm font-semibold mt-7.5">REFLEXÕES FINAIS</span>
-                <div class="w-full bg-[#D3D3D3] h-2 hidden" id="marcador_reflexoes"></div>
-            </div>
-
-        </div>
-
-        <!--<div
-            class="lg:w-350 flex justify-start items-center w-450 lg:w-350 bg-[#D3D3D3] h-50 lg:h-55 rounded-md shadow-[0_0_10px_rgba(0,0,0,0.3)]">
-
-            <div
-                class="w-120 lg:w-80 h-full flex-col justify-center items-center bg-linear-to-l from-[#9932CC] to-[#9400D3] rounded-l-md">
                 <div class="flex items-center justify-center h-4/5 mt-3">
                     <h2 class="font-semibold text-white">MINHAS HABILIDADES</h2>
                 </div>
 
                 <div class="w-full h-1/5 flex justify-between items-center px-8 -mt-6">
-                    <div class="bg-white w-20 h-8 rounded-md flex justify-center items-center gap-2 ">
-                        <i class="fa-solid fa-tag text-[#1C1C1C]"></i>
-                        <i class="text-sm font-semibold text-[#1C1C1C]">EAD</i>
+                    <div
+                        class="bg-white w-20 h-8 rounded-md flex justify-center items-center gap-2 group hover:bg-[#1C1C1C] transition duration-300 hover:transition duration-300">
+                        <i
+                            class="fa-solid fa-tag text-[#1C1C1C] group-hover:text-white transition duration-300 group-hover:transition duration-300"></i>
+                        <i
+                            class="text-sm font-semibold text-[#1C1C1C] group-hover:text-white transition duration-300 group-hover:transition duration-300 cursor-default">EAD</i>
                     </div>
-                    <div class="">
-                        <i class="fa-regular fa-star text-2xl text-white"></i>
-                    </div>
+                    <i class="fa-regular fa-star text-2xl text-white cursor-pointer" id="star-3" onclick="star(3)"></i>
                 </div>
             </div>
 
+            <!-- Parte direita do card -->
             <div class="flex-1 w-full h-full flex items-center justify-center p-2">
-                <i class="text-center text-[#1C1C1C] text-[13px]">
-                    Para mim o que diferencia um desenvolvedor sênior para um pleno/júnior não é apenas as tecnologias
+                <i class="text-center text-[#1C1C1C] text-[14px]">
+                    Para mim o que diferencia um desenvolvedor sênior para um pleno/júnior não é apenas as
+                    <strong>TECNOLOGIAS</strong>
                     que ele vai saber, mas a forma e a velocidade que ele resolverá os problemas que enfrentar, isto é
                     algo que vem apenas com o tempo, após errar tantas vezes o desenvolvedor aprende a resolver os bugs
                     e incongruências no código, e, quando enfrentá-los novamente, saberá resolvê-los.<br>
-                    Para chegar no patamar que almejo eu preciso estudar muito e buscar aprender sempre, trabalhar no
+                    Para chegar no patamar que almejo eu preciso <strong>ESTUDAR</strong> muito e buscar aprender
+                    sempre, trabalhar no
                     momento com as linguagens de programação web, futuramente mobile e sistemas de segurança. Desejo
-                    muito começar a trabalhar nesta área o quanto antes, quem sabe num estágio, trabalhando nisto tenho
-                    certeza que meu aprendizado será muito mais acelerado.<br>
+                    muito começar a <strong>TRABALHAR</strong> nesta área o quanto antes, quem sabe num estágio,
+                    trabalhando nisto tenho
+                    certeza que meu <strong>APRENDIZADO</strong> será muito mais acelerado.<br>
                     Tenho conhecimento em algumas linguagens, entre elas o PHP, o JavaScript, o TypeScript e o SQL,
                     incluindo os frameworks Bootstrap, Tailwind CSS, Laravel 12 e Node JS, mas, para ser um
-                    desenvolvedor sênior não basta apenas saber variáveis tipos de tecnologias; é necessário dominar a
-                    arquitetura, entender o porquê das ferramentas e garantir qualidade e escalabilidade, isso se ganha
+                    desenvolvedor <strong>SÊNIOR</strong> não basta apenas saber variáveis tipos de tecnologias; é
+                    necessário dominar a
+                    <strong>ARQUITETURA</strong>, entender o porquê das ferramentas e garantir qualidade e
+                    escalabilidade, isso se ganha
                     apenas com muito estudo, trabalhando na área e buscando aprender sempre.
                 </i>
             </div>
 
         </div>
 
-        <div
-            class="lg:w-350 flex justify-start items-center w-450 lg:w-350 bg-[#D3D3D3] h-50 lg:h-55 rounded-md shadow-[0_0_10px_rgba(0,0,0,0.3)]">
+        <!-- Card -->
+        <div class="flex justify-start items-center w-450 lg:w-350 h-50 lg:h-55 rounded-md shadow-2xl bg-[#D3D3D3] mb-20 hidden"
+            id="card-oito-anos-pess">
 
+            <!-- Parte esquerda do card -->
             <div
-                class="w-120 lg:w-80 h-full flex-col justify-center items-center bg-linear-to-l from-[#9932CC] to-[#9400D3] rounded-l-md">
+                class="w-120 lg:w-80 h-full flex-col justify-center items-center bg-linear-to-l from-[#BA55D3] to-[#9400D3] rounded-l-md">
+
                 <div class="flex items-center justify-center h-4/5 mt-3">
                     <h2 class="font-semibold text-white">DAQUI 8 ANOS (PESSOALMENTE)</h2>
                 </div>
 
                 <div class="w-full h-1/5 flex justify-between items-center px-8 -mt-6">
-                    <div class="bg-white w-20 h-8 rounded-md flex justify-center items-center gap-2 ">
-                        <i class="fa-solid fa-tag text-[#1C1C1C]"></i>
-                        <i class="text-sm font-semibold text-[#1C1C1C]">EAD</i>
+                    <div
+                        class="bg-white w-20 h-8 rounded-md flex justify-center items-center gap-2 group hover:bg-[#1C1C1C] transition duration-300 hover:transition duration-300">
+                        <i
+                            class="fa-solid fa-tag text-[#1C1C1C] group-hover:text-white transition duration-300 group-hover:transition duration-300"></i>
+                        <i
+                            class="text-sm font-semibold text-[#1C1C1C] group-hover:text-white transition duration-300 group-hover:transition duration-300 cursor-default">EAD</i>
                     </div>
-                    <div class="">
-                        <i class="fa-regular fa-star text-2xl text-white"></i>
-                    </div>
+                    <i class="fa-regular fa-star text-2xl text-white cursor-pointer" id="star-4" onclick="star(4)"></i>
                 </div>
             </div>
 
+            <!-- Parte direita do card -->
             <div class="flex-1 w-full h-full flex items-center justify-center p-2">
-                <i class="text-center text-[#1C1C1C] text-[13px]">
-                    Me vejo evoluído em todos os aspectos: frequentando cada vez mais a igreja e buscando as coisas de
-                    Deus, jogando futebol, frequentando a academia e trabalhando com o que gosto.
+                <i class="text-center text-[#1C1C1C] text-[14px]">
+                    Me vejo <strong>EVOLUÍDO</strong> em todos os aspectos: frequentando cada vez mais a <strong>IGREJA</strong> e buscando as coisas de
+                    Deus, jogando <strong>FUTEBOL</strong>, frequentando a <strong>ACADEMIA</strong> e <strong>TRABALHANDO</strong> com o que gosto.
                 </i>
             </div>
 
         </div>
 
-        <div
-            class="lg:w-350 flex justify-start items-center w-450 lg:w-350 bg-[#D3D3D3] h-50 lg:h-55 rounded-md shadow-[0_0_10px_rgba(0,0,0,0.3)]">
+        <!-- Card -->
+        <div class="flex justify-start items-center w-450 lg:w-350 h-50 lg:h-55 rounded-md shadow-2xl bg-[#D3D3D3] mb-20 hidden"
+            id="card-oito-anos-prof">
 
+            <!-- Parte esquerda do card -->
             <div
-                class="w-120 lg:w-80 h-full flex-col justify-center items-center bg-linear-to-l from-[#9932CC] to-[#9400D3] rounded-l-md">
+                class="w-120 lg:w-80 h-full flex-col justify-center items-center bg-linear-to-l from-[#BA55D3] to-[#9400D3] rounded-l-md">
+
                 <div class="flex items-center justify-center h-4/5 mt-3">
                     <h2 class="font-semibold text-white">DAQUI 8 ANOS (PROFISSIONALMENTE)</h2>
                 </div>
 
                 <div class="w-full h-1/5 flex justify-between items-center px-8 -mt-6">
-                    <div class="bg-white w-20 h-8 rounded-md flex justify-center items-center gap-2 ">
-                        <i class="fa-solid fa-tag text-[#1C1C1C]"></i>
-                        <i class="text-sm font-semibold text-[#1C1C1C]">EAD</i>
+                    <div
+                        class="bg-white w-20 h-8 rounded-md flex justify-center items-center gap-2 group hover:bg-[#1C1C1C] transition duration-300 hover:transition duration-300">
+                        <i
+                            class="fa-solid fa-tag text-[#1C1C1C] group-hover:text-white transition duration-300 group-hover:transition duration-300"></i>
+                        <i
+                            class="text-sm font-semibold text-[#1C1C1C] group-hover:text-white transition duration-300 group-hover:transition duration-300 cursor-default">EAD</i>
                     </div>
-                    <div class="">
-                        <i class="fa-regular fa-star text-2xl text-white"></i>
-                    </div>
+                    <i class="fa-regular fa-star text-2xl text-white cursor-pointer" id="star-5" onclick="star(5)"></i>
                 </div>
             </div>
 
+            <!-- Parte direita do card -->
             <div class="flex-1 w-full h-full flex items-center justify-center p-2">
-                <i class="text-center text-[#1C1C1C] text-[13px]">
-                    Me vejo um desenvolvedor sênior full-stack tendo no currículo o maior número de linguagens,
-                    tecnologias e frameworks possíveis, trabalhando neste setor em alguma grande empresa e/ou ganhando
-                    bom salário como freelancer, vendendo os sites/aplicativos que desenvolvi para pessoas/empresas,
+                <i class="text-center text-[#1C1C1C] text-[14px]">
+                    Me vejo um desenvolvedor sênior <strong>FULL-STACK</strong> tendo no currículo o maior número de linguagens,
+                    tecnologias e frameworks possíveis, trabalhando neste setor em alguma grande <strong>EMPRESA</strong> e/ou ganhando
+                    um bom salário como <strong>FREELANCER</strong>, vendendo os sites/aplicativos que <strong>DESENVOLVI</strong> para pessoas/empresas,
                     apenas fornecendo manutenção aos mesmos mensalmente.
                 </i>
             </div>
 
         </div>
 
-        <div
-            class="lg:w-350 flex justify-start items-center w-450 lg:w-350 bg-[#D3D3D3] h-50 lg:h-55 rounded-md shadow-[0_0_10px_rgba(0,0,0,0.3)]">
+        <!-- Card -->
+        <div class="flex justify-start items-center w-450 lg:w-350 h-50 lg:h-55 rounded-md shadow-2xl bg-[#D3D3D3] mb-20"
+            id="card-dificuldades">
 
+            <!-- Parte esquerda do card -->
             <div
-                class="w-120 lg:w-80 h-full flex-col justify-center items-center bg-linear-to-l from-[#9932CC] to-[#9400D3] rounded-l-md">
+                class="w-120 lg:w-80 h-full flex-col justify-center items-center bg-linear-to-l from-[#BA55D3] to-[#9400D3] rounded-l-md">
+
                 <div class="flex items-center justify-center h-4/5 mt-3">
                     <h2 class="font-semibold text-white">DIFICULDADES NO PROCESSO</h2>
                 </div>
 
                 <div class="w-full h-1/5 flex justify-between items-center px-8 -mt-6">
-                    <div class="bg-white w-20 h-8 rounded-md flex justify-center items-center gap-2 ">
-                        <i class="fa-solid fa-tag text-[#1C1C1C]"></i>
-                        <i class="text-sm font-semibold text-[#1C1C1C]">EAD</i>
+                    <div
+                        class="bg-white w-20 h-8 rounded-md flex justify-center items-center gap-2 group hover:bg-[#1C1C1C] transition duration-300 hover:transition duration-300">
+                        <i
+                            class="fa-solid fa-tag text-[#1C1C1C] group-hover:text-white transition duration-300 group-hover:transition duration-300"></i>
+                        <i
+                            class="text-sm font-semibold text-[#1C1C1C] group-hover:text-white transition duration-300 group-hover:transition duration-300 cursor-default">EAD</i>
                     </div>
-                    <div class="">
-                        <i class="fa-regular fa-star text-2xl text-white"></i>
-                    </div>
+                    <i class="fa-regular fa-star text-2xl text-white cursor-pointer" id="star-7" onclick="star(7)"></i>
                 </div>
             </div>
 
+            <!-- Parte direita do card -->
             <div class="flex-1 w-full h-full flex items-center justify-center p-2">
-                <i class="text-center text-[#1C1C1C] text-[13px]">
-                    O maior empecilho que enfrento para estudar e trabalhar na minha vida acadêmica-profissional é, sem
-                    dúvida, a falta de tempo.
+                <i class="text-center text-[#1C1C1C] text-[14px]">
+                    O maior <strong>EMPECILHO</strong> que enfrento para estudar e trabalhar na minha vida acadêmica-profissional é, sem
+                    dúvida, a falta de <strong>TEMPO</strong>.
                     Além de acordar cedo para trabalhar e retornar somente à noite (como um colega me disse, que nós
-                    moramos na empresa e visitamos nossa casa), ainda tenho outros compromissos para com a casa,
+                    moramos na empresa e visitamos nossa casa), ainda tenho outros <strong>COMPROMISSOS</strong> para com a casa,
                     academia, igreja, futebol e os estudos por fora que realizo sobre programação.<br>
                     Para combater este problema eu preciso abrir mão de algumas coisas, conseguir mais tempo e poder
-                    focar nos estudos. A fim de me ajudar comecei a acordar de madrugada e, desta forma, estudo antes de
-                    trabalhar, além da noite; no serviço, quando consigo, também realizo as atividades que estão
+                    focar nos <strong>ESTUDOS</strong>. A fim de me ajudar comecei a acordar de madrugada e, desta forma, estudo antes de
+                    trabalhar, além da noite; no serviço, quando consigo, também realizo as <strong>ATIVIDADES</strong> que estão
                     pendentes.
                 </i>
             </div>
 
-        </div>-->
+        </div>
 
+        <!-- Rodapé de navegação -->
+        <div
+            class="bg-pink-900 w-300 h-20 mt-25 rounded-t-sm justify-center items-center inline-flex gap-4 shadow-[0_0_10px_rgba(0,0,0,0.3)] absolute bottom-0">
+
+            <div class="flex flex-col w-1/7 h-full items-center justify-between text-center ml-[16px] hover:bg-pink-800 transition duration-300 hover:transition duration-300 cursor-pointer"
+                onclick="sobre()">
+                <span class="text-white text-sm font-semibold mt-7.5">SOBRE MIM</span>
+                <div class="w-full bg-[#D3D3D3] h-2" id="marcador_sobre"></div>
+            </div>
+
+            <div class="flex flex-col w-1/7 h-full  items-center justify-between text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300"
+                onclick="habilidades()">
+                <span class="text-white text-sm font-semibold mt-7.5">MINHAS HABILIDADES</span>
+                <div class="w-full bg-[#D3D3D3] h-2 hidden" id="marcador_habilidades"></div>
+            </div>
+
+            <div class="flex flex-col w-1/7 h-full  items-center justify-between text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300"
+                onclick="oito_anos_pessoalmente()">
+                <span class="text-white text-sm font-semibold mt-5">DAQUI 8 ANOS (PESSOALMENTE)</span>
+                <div class="w-full bg-[#D3D3D3] h-2 hidden" id="marcador_oito_anos_pess"></div>
+            </div>
+
+            <div class="flex flex-col w-1/7 h-full  items-center justify-between text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300"
+                onclick="oito_anos_profissionalmente()">
+                <span class="text-white text-sm font-semibold mt-5">DAQUI 8 ANOS (PROFISSIONALMENTE)</span>
+                <div class="w-full bg-[#D3D3D3] h-2 hidden" id="marcador_oito_anos_prof"></div>
+            </div>
+
+            <div class="flex flex-col w-1/7 h-full  items-center justify-between text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300"
+                onclick="dificuldades()">
+                <span class="text-white text-sm font-semibold mt-5">DIFICULDADES NO PROCESSO</span>
+                <div class="w-full bg-[#D3D3D3] h-2 hidden" id="marcador_dificuldades"></div>
+            </div>
+
+            <div class="flex flex-col w-1/7 h-full  items-center justify-between text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300"
+                onclick="inspirador()">
+                <span class="text-white text-sm font-semibold mt-5">PROFISSIONAL INSPIRADOR</span>
+                <div class="w-full bg-[#D3D3D3] h-2 hidden" id="marcador_inspirador"></div>
+            </div>
+
+            <div class="flex flex-col w-1/7 h-full  items-center justify-between text-center mr-[16px] cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300"
+                onclick="reflexoes()">
+                <span class="text-white text-sm font-semibold mt-7.5">REFLEXÕES FINAIS</span>
+                <div class="w-full bg-[#D3D3D3] h-2 hidden" id="marcador_reflexoes"></div>
+            </div>
+
+        </div>
 
     </main>
 
@@ -314,6 +338,15 @@
             document.getElementById("marcador_dificuldades").classList.add("hidden");
             document.getElementById("marcador_inspirador").classList.add("hidden");
             document.getElementById("marcador_reflexoes").classList.add("hidden");
+
+            document.getElementById("card-sobre").classList.remove("hidden");
+            document.getElementById("card-autoconhecimento").classList.remove("hidden");
+            document.getElementById("card-habilidades").classList.add("hidden");
+            document.getElementById("card-oito-anos-pess").classList.add("hidden");
+            document.getElementById("card-oito-anos-prof").classList.add("hidden");
+            document.getElementById("card-dificuldades").classList.add("hidden");
+            document.getElementById("card-inspirador").classList.add("hidden");
+            document.getElementById("card-reflexoes").classList.add("hidden");
         }
 
         function habilidades() {
@@ -324,6 +357,15 @@
             document.getElementById("marcador_dificuldades").classList.add("hidden");
             document.getElementById("marcador_inspirador").classList.add("hidden");
             document.getElementById("marcador_reflexoes").classList.add("hidden");
+
+            document.getElementById("card-sobre").classList.add("hidden");
+            document.getElementById("card-autoconhecimento").classList.add("hidden");
+            document.getElementById("card-habilidades").classList.remove("hidden");
+            document.getElementById("card-oito-anos-pess").classList.add("hidden");
+            document.getElementById("card-oito-anos-prof").classList.add("hidden");
+            document.getElementById("card-dificuldades").classList.add("hidden");
+            document.getElementById("card-inspirador").classList.add("hidden");
+            document.getElementById("card-reflexoes").classList.add("hidden");
         }
 
         function oito_anos_pessoalmente() {
@@ -334,6 +376,15 @@
             document.getElementById("marcador_dificuldades").classList.add("hidden");
             document.getElementById("marcador_inspirador").classList.add("hidden");
             document.getElementById("marcador_reflexoes").classList.add("hidden");
+
+            document.getElementById("card-sobre").classList.add("hidden");
+            document.getElementById("card-autoconhecimento").classList.add("hidden");
+            document.getElementById("card-habilidades").classList.add("hidden");
+            document.getElementById("card-oito-anos-pess").classList.remove("hidden");
+            document.getElementById("card-oito-anos-prof").classList.add("hidden");
+            document.getElementById("card-dificuldades").classList.add("hidden");
+            document.getElementById("card-inspirador").classList.add("hidden");
+            document.getElementById("card-reflexoes").classList.add("hidden");
         }
 
         function oito_anos_profissionalmente() {
@@ -344,6 +395,15 @@
             document.getElementById("marcador_dificuldades").classList.add("hidden");
             document.getElementById("marcador_inspirador").classList.add("hidden");
             document.getElementById("marcador_reflexoes").classList.add("hidden");
+
+            document.getElementById("card-sobre").classList.add("hidden");
+            document.getElementById("card-autoconhecimento").classList.add("hidden");
+            document.getElementById("card-habilidades").classList.add("hidden");
+            document.getElementById("card-oito-anos-pess").classList.add("hidden");
+            document.getElementById("card-oito-anos-prof").classList.remove("hidden");
+            document.getElementById("card-dificuldades").classList.add("hidden");
+            document.getElementById("card-inspirador").classList.add("hidden");
+            document.getElementById("card-reflexoes").classList.add("hidden");
         }
 
         function dificuldades() {
@@ -354,6 +414,15 @@
             document.getElementById("marcador_dificuldades").classList.remove("hidden");
             document.getElementById("marcador_inspirador").classList.add("hidden");
             document.getElementById("marcador_reflexoes").classList.add("hidden");
+
+            document.getElementById("card-sobre").classList.add("hidden");
+            document.getElementById("card-autoconhecimento").classList.add("hidden");
+            document.getElementById("card-habilidades").classList.add("hidden");
+            document.getElementById("card-oito-anos-pess").classList.add("hidden");
+            document.getElementById("card-oito-anos-prof").classList.add("hidden");
+            document.getElementById("card-dificuldades").classList.remove("hidden");
+            document.getElementById("card-inspirador").classList.add("hidden");
+            document.getElementById("card-reflexoes").classList.add("hidden");
         }
 
         function inspirador() {
@@ -364,6 +433,15 @@
             document.getElementById("marcador_dificuldades").classList.add("hidden");
             document.getElementById("marcador_inspirador").classList.remove("hidden");
             document.getElementById("marcador_reflexoes").classList.add("hidden");
+
+            document.getElementById("card-sobre").classList.add("hidden");
+            document.getElementById("card-autoconhecimento").classList.add("hidden");
+            document.getElementById("card-habilidades").classList.add("hidden");
+            document.getElementById("card-oito-anos-pess").classList.add("hidden");
+            document.getElementById("card-oito-anos-prof").classList.add("hidden");
+            document.getElementById("card-dificuldades").classList.add("hidden");
+            document.getElementById("card-inspirador").classList.remove("hidden");
+            document.getElementById("card-reflexoes").classList.add("hidden");
         }
 
         function reflexoes() {
@@ -374,6 +452,15 @@
             document.getElementById("marcador_dificuldades").classList.add("hidden");
             document.getElementById("marcador_inspirador").classList.add("hidden");
             document.getElementById("marcador_reflexoes").classList.remove("hidden");
+
+            document.getElementById("card-sobre").classList.add("hidden");
+            document.getElementById("card-autoconhecimento").classList.add("hidden");
+            document.getElementById("card-habilidades").classList.add("hidden");
+            document.getElementById("card-oito-anos-pess").classList.add("hidden");
+            document.getElementById("card-oito-anos-prof").classList.add("hidden");
+            document.getElementById("card-dificuldades").classList.add("hidden");
+            document.getElementById("card-inspirador").classList.add("hidden");
+            document.getElementById("card-reflexoes").classList.remove("hidden");
         }
     </script>
 </body>
