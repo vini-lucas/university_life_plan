@@ -28,7 +28,7 @@
 
         <!-- Card -->
         <div
-            class="flex justify-start items-center w-450 lg:w-350 h-50 lg:h-55 rounded-md shadow-2xl bg-[#D3D3D3]">
+            class="flex justify-start items-center w-450 lg:w-350 h-50 lg:h-55 rounded-md shadow-2xl bg-[#D3D3D3]" id="card-sobre">
 
             <!-- Parte esquerda do card -->
             <div
@@ -70,7 +70,7 @@
 
         <!-- Card -->
         <div
-            class="flex justify-start items-center w-450 lg:w-350 h-50 lg:h-55 rounded-md shadow-2xl bg-[#D3D3D3] mb-20">
+            class="flex justify-start items-center w-450 lg:w-350 h-50 lg:h-55 rounded-md shadow-2xl bg-[#D3D3D3] mb-20" id="card-autoconhecimento">
 
             <!-- Parte esquerda do card -->
             <div
@@ -88,7 +88,7 @@
                         <i
                             class="text-sm font-semibold text-[#1C1C1C] group-hover:text-white transition duration-300 group-hover:transition duration-300 cursor-default">EAD</i>
                     </div>
-                    <i class="fa-regular fa-star text-2xl text-white cursor-pointer" id="star-1" onclick="star(1)"></i>
+                    <i class="fa-regular fa-star text-2xl text-white cursor-pointer" id="star-2" onclick="star(2)"></i>
                 </div>
             </div>
 
@@ -113,45 +113,45 @@
             class="bg-pink-900 w-300 h-20 mt-25 rounded-t-sm justify-center items-center inline-flex gap-4 shadow-[0_0_10px_rgba(0,0,0,0.3)] absolute bottom-0">
 
             <div
-                class="flex flex-col w-1/7 h-full items-center justify-between text-center ml-[16px] hover:bg-pink-800 transition duration-300 hover:transition duration-300 cursor-pointer">
+                class="flex flex-col w-1/7 h-full items-center justify-between text-center ml-[16px] hover:bg-pink-800 transition duration-300 hover:transition duration-300 cursor-pointer" onclick="sobre()">
                 <span class="text-white text-sm font-semibold mt-7.5">SOBRE MIM</span>
-                <div class="w-full bg-[#D3D3D3] h-2"></div>
+                <div class="w-full bg-[#D3D3D3] h-2" id="marcador_sobre"></div>
             </div>
 
             <div
-                class="flex flex-col w-1/7 h-full  items-center justify-center text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300">
-                <span class="text-white text-sm font-semibold">MINHAS HABILIDADES</span>
-                <div class="w-full bg-amber-500 h-px hidden"></div>
+                class="flex flex-col w-1/7 h-full  items-center justify-between text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300" onclick="habilidades()">
+                <span class="text-white text-sm font-semibold mt-7.5">MINHAS HABILIDADES</span>
+                <div class="w-full bg-[#D3D3D3] h-2 hidden" id="marcador_habilidades"></div>
             </div>
 
             <div
-                class="flex flex-col w-1/7 h-full  items-center justify-center text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300">
-                <span class="text-white text-sm font-semibold">DAQUI 8 ANOS (PESSOALMENTE)</span>
-                <div class="w-full bg-amber-500 h-px hidden"></div>
+                class="flex flex-col w-1/7 h-full  items-center justify-between text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300" onclick="oito_anos_pessoalmente()">
+                <span class="text-white text-sm font-semibold mt-5">DAQUI 8 ANOS (PESSOALMENTE)</span>
+                <div class="w-full bg-[#D3D3D3] h-2 hidden" id="marcador_oito_anos_pess"></div>
             </div>
 
             <div
-                class="flex flex-col w-1/7 h-full  items-center justify-center text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300">
-                <span class="text-white text-sm font-semibold">DAQUI 8 ANOS (PROFISSIONALMENTE)</span>
-                <div class="w-full bg-amber-500 h-px hidden"></div>
+                class="flex flex-col w-1/7 h-full  items-center justify-between text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300" onclick="oito_anos_profissionalmente()">
+                <span class="text-white text-sm font-semibold mt-5">DAQUI 8 ANOS (PROFISSIONALMENTE)</span>
+                <div class="w-full bg-[#D3D3D3] h-2 hidden" id="marcador_oito_anos_prof"></div>
             </div>
 
             <div
-                class="flex flex-col w-1/7 h-full  items-center justify-center text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300">
-                <span class="text-white text-sm font-semibold">DIFICULDADES NO PROCESSO</span>
-                <div class="w-full bg-amber-500 h-px hidden"></div>
+                class="flex flex-col w-1/7 h-full  items-center justify-between text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300" onclick="dificuldades()">
+                <span class="text-white text-sm font-semibold mt-5">DIFICULDADES NO PROCESSO</span>
+                <div class="w-full bg-[#D3D3D3] h-2 hidden" id="marcador_dificuldades"></div>
             </div>
 
             <div
-                class="flex flex-col w-1/7 h-full  items-center justify-center text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300">
-                <span class="text-white text-sm font-semibold">PROFISSIONAL INSPIRADOR</span>
-                <div class="w-full bg-amber-500 h-px hidden"></div>
+                class="flex flex-col w-1/7 h-full  items-center justify-between text-center cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300" onclick="inspirador()">
+                <span class="text-white text-sm font-semibold mt-5">PROFISSIONAL INSPIRADOR</span>
+                <div class="w-full bg-[#D3D3D3] h-2 hidden" id="marcador_inspirador"></div>
             </div>
 
             <div
-                class="flex flex-col w-1/7 h-full  items-center justify-center text-center mr-[16px] cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300">
-                <span class="text-white text-sm font-semibold">REFLEXÕES FINAIS</span>
-                <div class="w-full bg-amber-500 h-px hidden"></div>
+                class="flex flex-col w-1/7 h-full  items-center justify-between text-center mr-[16px] cursor-pointer hover:bg-pink-800 transition duration-300 hover:transition duration-300" onclick="reflexoes()">
+                <span class="text-white text-sm font-semibold mt-7.5">REFLEXÕES FINAIS</span>
+                <div class="w-full bg-[#D3D3D3] h-2 hidden" id="marcador_reflexoes"></div>
             </div>
 
         </div>
@@ -304,6 +304,76 @@
                 document.getElementById("star-" + int).classList.add("fa-regular");
                 document.getElementById("star-" + int).classList.remove("fa-solid");
             }
+        }
+
+        function sobre() {
+            document.getElementById("marcador_sobre").classList.remove("hidden");
+            document.getElementById("marcador_habilidades").classList.add("hidden");
+            document.getElementById("marcador_oito_anos_pess").classList.add("hidden");
+            document.getElementById("marcador_oito_anos_prof").classList.add("hidden");
+            document.getElementById("marcador_dificuldades").classList.add("hidden");
+            document.getElementById("marcador_inspirador").classList.add("hidden");
+            document.getElementById("marcador_reflexoes").classList.add("hidden");
+        }
+
+        function habilidades() {
+            document.getElementById("marcador_sobre").classList.add("hidden");
+            document.getElementById("marcador_habilidades").classList.remove("hidden");
+            document.getElementById("marcador_oito_anos_pess").classList.add("hidden");
+            document.getElementById("marcador_oito_anos_prof").classList.add("hidden");
+            document.getElementById("marcador_dificuldades").classList.add("hidden");
+            document.getElementById("marcador_inspirador").classList.add("hidden");
+            document.getElementById("marcador_reflexoes").classList.add("hidden");
+        }
+
+        function oito_anos_pessoalmente() {
+            document.getElementById("marcador_sobre").classList.add("hidden");
+            document.getElementById("marcador_habilidades").classList.add("hidden");
+            document.getElementById("marcador_oito_anos_pess").classList.remove("hidden");
+            document.getElementById("marcador_oito_anos_prof").classList.add("hidden");
+            document.getElementById("marcador_dificuldades").classList.add("hidden");
+            document.getElementById("marcador_inspirador").classList.add("hidden");
+            document.getElementById("marcador_reflexoes").classList.add("hidden");
+        }
+
+        function oito_anos_profissionalmente() {
+            document.getElementById("marcador_sobre").classList.add("hidden");
+            document.getElementById("marcador_habilidades").classList.add("hidden");
+            document.getElementById("marcador_oito_anos_pess").classList.add("hidden");
+            document.getElementById("marcador_oito_anos_prof").classList.remove("hidden");
+            document.getElementById("marcador_dificuldades").classList.add("hidden");
+            document.getElementById("marcador_inspirador").classList.add("hidden");
+            document.getElementById("marcador_reflexoes").classList.add("hidden");
+        }
+
+        function dificuldades() {
+            document.getElementById("marcador_sobre").classList.add("hidden");
+            document.getElementById("marcador_habilidades").classList.add("hidden");
+            document.getElementById("marcador_oito_anos_pess").classList.add("hidden");
+            document.getElementById("marcador_oito_anos_prof").classList.add("hidden");
+            document.getElementById("marcador_dificuldades").classList.remove("hidden");
+            document.getElementById("marcador_inspirador").classList.add("hidden");
+            document.getElementById("marcador_reflexoes").classList.add("hidden");
+        }
+
+        function inspirador() {
+            document.getElementById("marcador_sobre").classList.add("hidden");
+            document.getElementById("marcador_habilidades").classList.add("hidden");
+            document.getElementById("marcador_oito_anos_pess").classList.add("hidden");
+            document.getElementById("marcador_oito_anos_prof").classList.add("hidden");
+            document.getElementById("marcador_dificuldades").classList.add("hidden");
+            document.getElementById("marcador_inspirador").classList.remove("hidden");
+            document.getElementById("marcador_reflexoes").classList.add("hidden");
+        }
+
+        function reflexoes() {
+            document.getElementById("marcador_sobre").classList.add("hidden");
+            document.getElementById("marcador_habilidades").classList.add("hidden");
+            document.getElementById("marcador_oito_anos_pess").classList.add("hidden");
+            document.getElementById("marcador_oito_anos_prof").classList.add("hidden");
+            document.getElementById("marcador_dificuldades").classList.add("hidden");
+            document.getElementById("marcador_inspirador").classList.add("hidden");
+            document.getElementById("marcador_reflexoes").classList.remove("hidden");
         }
     </script>
 </body>
